@@ -20,7 +20,7 @@ In this lab we were given a truth table with 4 variables (A,B,C,D). We took that
 ## Lab Questions
 
 ### Why are the groups of 1’s (or 0’s) that we select in the KMap able to go across edges?
-The reason that the 1’s and 0’s are able to go across edges is that there is only one variable change. This allows the edges to wrap around creating a cylindrical shape.
+The reason that the 1’s and 0’s are able to go across edges is that there is only one variable change. This allows the edges to wrap around, creating a cylindrical shape in both directions.
 
 ### Why are the names Sum of Products and Products of Sums?
 The reason for the Sum of Products (SOP) Product of Sum (POS) naming is where the “or” and “and” gates are placed. For SOP, we are finding the minterms, placing an “and” in between the values and an “or” between each minterm creating the SOP. For POS, we are finding the maxterms, placing an “or” in between the values and an “and” between each maxterm creating the POS. 
