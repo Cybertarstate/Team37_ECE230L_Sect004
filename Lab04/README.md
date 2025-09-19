@@ -20,13 +20,13 @@ In this lab we were given a truth table with 4 variables (A,B,C,D). We took that
 ## Lab Questions
 
 ### Why are the groups of 1’s (or 0’s) that we select in the KMap able to go across edges?
-The reason that the 1’s and 0’s are able to go across edges is that there is only one variable change. This allows the edges to wrap around creating a cylindrical shape.
+The reason that the 1’s and 0’s are able to go across edges is that there is only one variable change. This allows the edges to wrap around creating a wrap around vertically and horizontally, making a cylindrical donut shape.
 
 ### Why are the names Sum of Products and Products of Sums?
 The reason for the Sum of Products (SOP) Product of Sum (POS) naming is where the “or” and “and” gates are placed. For SOP, we are finding the minterms, placing an “and” in between the values and an “or” between each minterm creating the SOP. For POS, we are finding the maxterms, placing an “or” in between the values and an “and” between each maxterm creating the POS. 
 ### Open the test.v file – how are we able to check that the signals match using XOR?
 
-We can check that the signals match using an XOR, because it will equal 0 if the outputs match and 1 if the outputs are different. Since we want the outputs to never be different, then the if statement will only run if a 0 is not provided by the XOR. This concept can be similarly applied for checking both minterms and maxterms of our boolean expression, since both the SOP and POS are supposed to give us the same result. The naive LED is set to 0, and we made this long dumb expression that we know matches the truth table. The code compares that output LED 0 to the minterm LED 1, and this ensures that our nice optimized expression matches the long expression from the truth table. Then we match LED 0 to LED 2 and this shows that our nice optimized expression from the maxterms to produce the POS, matches the long naive expression.
+We can check that the signals match using an XOR, because it will equal 0 if the outputs match and 1 if the outputs are different. Since we want to test the outputs and want to see if the values match, the if statement will only run if a 0 is not provided by the XOR. The exclusively OR means that it only returns 1 if it sees a 1 or 0, 0 or 1, so we can see that a binary difference needs to occur. This concept can be similarly applied for checking both minterms and maxterms of our boolean expression, since both the SOP and POS are supposed to give us the same result. The naive LED is set to 0, and we made this long dumb expression that we know matches the truth table. The code compares that output LED 0 to the minterm LED 1, and this ensures that our nice optimized expression matches the long expression from the truth table. Then we match LED 0 to LED 2 and this shows that our nice optimized expression from the maxterms to produce the POS, matches the long naive expression.
 
 
 
