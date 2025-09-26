@@ -19,6 +19,6 @@ In this lab we were given truth tables for, circuit A and circuit B. From the ci
 ### 1 - Explain the role of the Top Level file.
 The role of this file is to direct the inputs and outputs of both circuit_ a and circuit_b modules. We use switches and LEDs to accomplish this task putting the output of circuit_a as the input a for circuit_b.
 ### 2 - Explain the function of the Constraints file.
-The function of the constraints file is to pull a name from top.v, operate on it, and then pass in a dictionary of properties. The constraints file has switches and LEDs mapped to GPIO pins, we uncommented the portions we utilized for the circuits in the lab.
+The function of the constraints file is to pull a name from top.v, operate on it, and then pass in a dictionary of properties. The constraints file maps switches and LEDs to physical GPIO pins on the FPGA, enabling our program to run on the board as intended. We were able to uncomment the portions we utilized for the circuits in the lab.
 ### 3 - Was the selection of Minterm and Maxterm correct for each circuit? What would you have chosen?
 Yes, the selection was correct for each circuit. If given the choice, I would have chosen Minterm for both circuits. The reason for this is that the circuit_a’s Minterms could have been grouped in one block instead of three. The groups for circuit_b would be about the same either way, so I would have stuck with Minterm as well. 
