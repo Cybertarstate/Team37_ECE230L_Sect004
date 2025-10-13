@@ -22,7 +22,7 @@ full_adder full_adder1_inst(
 );
 
 full_adder full_adder2_inst(
-    .A(A[2]),
+    .A(~A[2]),
     .B(1'b0),
     .Cin(carry_wire[1]),
     .Y(Y[2]),
@@ -30,7 +30,7 @@ full_adder full_adder2_inst(
 );
 
 full_adder full_adder3_inst(
-    .A(A[3]),
+    .A(~A[3]),
     .B(1'b0),
     .Cin(carry_wire[2]),
     .Y(Y[3]),
