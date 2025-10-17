@@ -9,7 +9,7 @@ module ones_compliment (
       full_adder full_adder0_inst(
         .A(A[0]),
         .B(B[0]),
-        .Cin(0),
+        .Cin(1'b0),
         .Y(out_wire[0]),
         .Cout(carry_wire1[0])
     );
