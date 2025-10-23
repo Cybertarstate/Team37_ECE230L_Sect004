@@ -1,14 +1,16 @@
 
 //2 bit wide, 2 output demux
 module de_mux(
-    input [1:0] In,
-    input Sel,
-    output [1:0] Y1,
-    output [1:0] Y2
+    input [3:0] In,
+    input Sel[1:0],
+    input Enable,
+    output [3:0] Local_Lib,FD,SCHOOL,RIBS
 );
 
-    assign Y1 = (Sel == 1'b0 ? In : 0); // Drive Y1 if Sel == 0
-    assign Y2 = (Sel == 1'b1 ? In : 0); // Drive Y2 if Sel == 1
+    assign Local_Lib = (Sel == 'b00 ? In : 0);
+    assign FD = (Sel == 'b01 ? In : 0);
+    assign SCHOOL = (Sel == 'b10 ? In : 0);
+    assign RIBS = (Sel == 'b11 ? In : 0);
 
 endmodule
 
