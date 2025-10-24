@@ -11,7 +11,7 @@ assign demuxwire[0] = btnD;
 assign demuxwire[1] = btnR;
 assign enablewire = btnC;
 
-4_mux mux_inst( 
+mux mux_inst( 
     .CEO(sw[3:0]),
     .YOU(sw[7:4]),
     .FRED(sw[11:8]),
@@ -22,10 +22,10 @@ assign enablewire = btnC;
 );
 
 de_mux de_mux_inst( 
-    .Local_Lib(LED[3:0]),
-    .FD(LED[7:4]),
-    .SCHOOL(LED[11:8]),
-    .RIBS(LED[15:12]),
+    .Local_Lib(led[3:0]),
+    .FD(led[7:4]),
+    .SCHOOL(led[11:8]),
+    .RIBS(led[15:12]),
     .Sel(btnD),
     .Sel(btnR),
     .Enable(btnC)
@@ -33,4 +33,3 @@ de_mux de_mux_inst(
 
 
 endmodule
-
