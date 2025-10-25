@@ -6,7 +6,6 @@ module top (
 
 
 wire [1:0] muxwire,demuxwire;
-//wire enablewire;
 wire [3:0]ywire;
 
 assign muxwire[0] = btnL;
