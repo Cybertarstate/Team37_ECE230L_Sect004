@@ -13,7 +13,6 @@ assign muxwire[0] = btnL;
 assign muxwire[1] = btnU;
 assign demuxwire[0] = btnD;
 assign demuxwire[1] = btnR;
-//assign enablewire = btnC;
 
 mux mux_inst( 
     .CEO(sw[3:0]),
