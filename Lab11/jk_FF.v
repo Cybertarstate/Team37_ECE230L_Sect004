@@ -13,7 +13,7 @@ module jk_FF(
 
     assign internal_D = (J & not_internal_Q)|(~K & internal_Q)
     assign Q = internal_Q;
-    assignt barQ = not_internal_Q;
+    assign barQ = not_internal_Q;
 
 
     d_FF inst(
