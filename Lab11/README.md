@@ -17,7 +17,7 @@ For this lab, we created three different flip flops including a D flip flop, JK 
 ## Lab Questions
 
 ### What is different between edge and level sensitive circuits?
-The difference between an edge sensitive circuit and a level sensitive circuit is that a level sensitive circuit allows change as long as the enable is active while the edge sensitive circuit only allows change during the short period of the enable changing values.
+The difference between an edge sensitive circuit and a level sensitive circuit is that a level sensitive circuit allows change as long as the enable is active while the edge sensitive circuit only allows change during the short period of the positive clock edge.
 
 ### Why is it important to declare initial state?
 It is important to declare an initial state because it gives us a definite starting point. Without declaring an initial state the board has no way of knowing the state of any of the various pieces of memory within. 
