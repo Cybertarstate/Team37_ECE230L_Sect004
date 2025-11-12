@@ -5,6 +5,23 @@ module module_counter (
     output y
 );
 
+    if (clk) begin
+    end 
     
+    if (reset) begin
+    end
+    
+    d_FF inst (
+    
+    );
+    
+    full_adder inst (
+    
+    );
+    
+    // Possibly a for loop?
+    always @(posedge clk) begin 
+    
+    end
 
 endmodule
