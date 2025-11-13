@@ -1,6 +1,7 @@
 module d_FF(
     input data,
     input clk,
+    input reset,
     output reg Q,
     output barQ
 );
@@ -10,11 +11,13 @@ module d_FF(
     end
     
     always @(posedge clk) begin 
-            Q <= data; 
+        if (reset == 1'b1)
+            Q <= 0;
+        else
+            Q <= data;
     end
 
     assign barQ = ~Q;
 
 
 endmodule
-
