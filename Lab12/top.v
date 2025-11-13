@@ -7,7 +7,9 @@ module top(
 module_counter inst1(
     .clk(btnC),
     .reset(btnU),
-    .y(led[6:3])
+    .stage0(led[3]),
+    .stage1(led[4]),
+    .stage2(led[5])
 );   
 
 ripple_counter inst2(
