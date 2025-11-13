@@ -4,7 +4,7 @@ module top(
     output [6:0]led
 );
     
-module_counter inst1(
+mod_div inst1(
     .clk(btnC),
     .reset(btnU),
     .stage0(led[3]),
