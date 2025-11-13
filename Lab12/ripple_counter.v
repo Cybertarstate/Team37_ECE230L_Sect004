@@ -1,5 +1,5 @@
 module ripple_counter (
-    input clk,reset,
+    input clk, reset,
     output [2:0]y
 );
 
@@ -20,5 +20,6 @@ t_FF inst3(
   .clk(inst2.Q),
   .Q(y[2])
 );
+
 
 endmodule
