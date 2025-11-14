@@ -1,6 +1,7 @@
 module jk_FF(
     input J,
     input K,
+    input reset,
     input clk,
     output Q,
     output barQ
@@ -18,6 +19,7 @@ module jk_FF(
 
     d_FF inst(
         .data(internal_D),
+        .reset(reset),
         .Q(internal_Q),
         .clk(clk),
         .barQ(not_internal_Q)

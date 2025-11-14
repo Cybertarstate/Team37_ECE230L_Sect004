@@ -10,9 +10,9 @@ module d_FF(
         Q <= 0;
     end
     
-    always @(posedge clk) begin 
+    always @(posedge clk or posedge reset) begin 
         if (reset == 1'b1)
-            Q <= 0;
+            Q <= 1'b0;
         else
             Q <= data;
     end

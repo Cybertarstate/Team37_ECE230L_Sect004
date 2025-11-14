@@ -9,7 +9,8 @@ mod_div inst1(
     .reset(btnU),
     .stage0(led[3]),
     .stage1(led[4]),
-    .stage2(led[5])
+    .stage2(led[5]),
+    .mc_out(led[6])
 );   
 
 ripple_counter inst2(

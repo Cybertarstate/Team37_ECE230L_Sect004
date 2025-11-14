@@ -1,48 +1,53 @@
 module mod_div(
-    input clk
+    input clk,
+    input reset,
     output stage0,
     output stage1,
-    output stage2
+    output stage2,
+    output mc_out
 );
-wire comp0;
 
-assign comp0 = (d_FFinst2.Q == 1'b1) ? ((d_FFinst1.Q == 1'b1) ? ((d_FFinst0.Q == 1'b0) ? 1'b1 : 1'b0): 1'b0): 1'b0;
-assign stage0 = d_FFinst0.Q;
-assign stage1 = d_FFinst1.Q;
-assign stage2 = d_FFinst2.Q;
+wire q0,q1,q2,q3,q4;
+
+
+
+
+assign stage0 = q0;
+assign stage1 = q1;
+assign stage2 = q2;
+
 
 
 full_adder inst0(
-    .A(d_FFinst0.Q),
-    .B(clk),
-    .Cin(1'b0),
+    .A(q0),
+    .B(1'b0),
+    .Cin(1'b1),
     .Cout(),
     .Y()
-
 );
+
 full_adder inst1(
-    .A(d_FFinst1.Q),
+    .A(q1),
     .B(1'b0),
     .Cin(inst0.Cout),
     .Cout(),
     .Y()
-
 );
+
 full_adder inst2(
-    .A(d_FFinst2.Q),
+    .A(q2),
     .B(1'b0),
     .Cin(inst1.Cout),
     .Cout(),
     .Y()
-
 );
 
 
 d_FF d_FFinst0(
     .data(inst0.Y),
     .clk(clk),
-    .reset(d_FFinst3.Q),
-    .Q(),
+    .reset(mc_out|reset),
+    .Q(q0),
     .barQ()
 );
 
@@ -50,31 +55,26 @@ d_FF d_FFinst0(
 d_FF d_FFinst1(
     .data(inst1.Y),
     .clk(clk),
-    .reset(d_FFinst3.Q),
-    .Q(),
+    .reset(mc_out|reset),
+    .Q(q1),
     .barQ()
 );
 
 d_FF d_FFinst2(
     .data(inst2.Y),
     .clk(clk),
-    .reset(d_FFinst3.Q),
-    .Q(),
+    .reset(mc_out|reset),
+    .Q(q2),
     .barQ()
 );
 
 d_FF d_FFinst3(
-    .data(comp0),
+    .data((q2 & !q1 & q0)),
     .clk(clk),
-    .reset(1'b0),
-    .Q(),
+    .Q(mc_out),
+    .reset(reset),
     .barQ()
 );
-
-
-
-
-
 
 
 

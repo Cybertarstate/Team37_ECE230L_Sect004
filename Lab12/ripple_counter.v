@@ -3,20 +3,26 @@ module ripple_counter (
     output [2:0]y
 );
 
+  
+
 t_FF inst1(
-  .T(reset),
+  .T(1'b1),
+  .reset(reset),
   .clk(clk),
   .Q(y[0])
 );
 
+
 t_FF inst2(
-  .T(reset),
-  .clk(isnt1.Q),
+  .T(1'b1),
+  .reset(reset),
+  .clk(inst1.Q),
   .Q(y[1])
 );
 
 t_FF inst3(
-  .T(reset),
+  .T(1'b1),
+  .reset(reset),
   .clk(inst2.Q),
   .Q(y[2])
 );
