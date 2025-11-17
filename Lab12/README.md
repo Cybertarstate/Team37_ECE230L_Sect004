@@ -19,7 +19,7 @@ In this lab, we implemented two types of counters. We used a ripple counter whic
 A full cycle in Hz is defined as a transition from high to low, and then back to high. So, we actually have to do two entire full counts to get one single Hz. 
 
 ### 2 - Why does the ring counter's output go to all 1s on the first clock cycle?
-The reason why the ring counter's output goes to all 1's on the first clock cycle is that our T values were set to 1. The Q of the first toggle is used as the clock for the second toggle, and the Q of the second toggle is used as the clock for the third toggle.
+The reason why the ring counter's output goes to all 1's on the first clock cycle is that our T values were set to 1. The Q of the first toggle is used as the clock for the second toggle, and the Q of the second toggle is used as the clock for the third toggle. This question is weird tho, cuz a ring counter is useing shift registers, and we used flip flops. I dont think we even implemented a ring counter, we was useing a ripple counter.
 
 ### 3 - What width of ring counter would you use to get to an output of ~1KHz?
 We would need a width of 100,000 for our ring counter to get an output of ~1KHz because we have an input of 100MHz.
