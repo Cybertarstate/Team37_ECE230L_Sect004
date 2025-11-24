@@ -21,5 +21,5 @@ One hot encoding has a d flip flop for each state. Binary encoding has a d flip 
 we found one hot encoding to be easier, it was just more straight forward. It took us a bit of time to wrap our head around how to even derive something k-mappable from the binary encoding. Indeed, it was neat to see.
 
 ### In what conditions would you have to use one over the other? Think about resource utilization on the FPGA.
-Certainly if we have many states we would want to use binary encoding, in a 3 bit binary implementation we could represent up to 7 states with 3 d flip flops, while for one hot encoding we would have to have one d flip flop for each state. As you can see with one hot encoding we would begin to run out of LEDs very quickly.
+Certainly if we have many states we would want to use binary encoding, in a 3 bit binary implementation we could represent up to 7 states with 3 d flip flops, while for one hot encoding we would have to have one d flip flop for each state. As you can see with one hot encoding we would begin to run out of LEDs very quickly. If we had very few D flip flops and we did not want to spend to much time thinking about the logic, and just want something to work quickly, then we would use the one hot encoding.
 
