@@ -8,7 +8,7 @@ module top(
     binary inst1(
         .w(sw),
         .clk(btnC),
-        .reset(reset),
+        .reset(btnU),
         .z(led[1]),
         .State(led[9:7])
     );
